@@ -1376,7 +1376,7 @@ list-style-type:none
 position:relative;
 display:block;
 width:68px;height:96px;
-background:url(%%b3%%) no-repeat;
+background:url(%%b%%) no-repeat;
 text-indent:-9999px;
 box-shadow:0 0 8px rgba(255,0,0,.35)
 }

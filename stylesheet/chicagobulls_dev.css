@@ -1217,7 +1217,7 @@ width:100%;height:158px;
 cursor:default;
 z-index:-1
 }
-.md a[href$="#B0"]{background:url(%%0%%) no-repeat}
+/*.md a[href$="#B0"]{background:url(%%0%%) no-repeat}
 .md a[href$="#B1"]{background:url(%%1%%) no-repeat}
 .md a[href$="#B3"]{background:url(%%3%%) no-repeat}
 .md a[href$="#B5"]{background:url(%%5%%) no-repeat}
@@ -1229,7 +1229,7 @@ z-index:-1
 .md a[href$="#B22"]{background:url(%%22%%) no-repeat}
 .md a[href$="#B41"]{background:url(%%41%%) no-repeat}
 .md a[href$="#B44"]{background:url(%%44%%) no-repeat}
-.md a[href$="#B55"]{background:url(%%55%%) no-repeat}
+.md a[href$="#B55"]{background:url(%%55%%) no-repeat}*/
 .side .usertext-body .md h4+h3+h4+ul li{
 max-width:140px;
 color:#FFF;
@@ -1317,49 +1317,6 @@ max-width:800px
 .linkflair-stats .md table tr td:first-child,
 .linkflair-stats .md table tr:nth-child(even) td{background:#F3F3F3}
 
-/*Starting Five*/
-/*.side .md h4+h4+h4+ul{
-position:absolute;
-top:19px;left:209px;
-padding-left:18px;
-z-index:-2!important
-}
-.side .md h4+h4+h4+ul li{float:left;list-style-type:none}
-.side .md h4+h4+h4+ul li a,
-.side .md h4+h4+h4+ul li a em{
-display:inline-block;
-width:60px;height:140px;
-text-indent:-9999px;
-transition:width .5s;
-}
-.side .md h4+h4+h4+ul li a{
-position:relative;
-border-left:3px solid #D70E32;
-overflow:hidden;
-transform:skewX(-.125rad)
-}
-.side .md h4+h4+h4+ul li:last-child a{border-right:3px solid #D70E32}
-.side .md h4+h4+h4+ul li a:hover{width:120px}
-.side .md h4+h4+h4+ul li a em{
-position:relative;
-display:block;
-left:-10px;
-width:90px;
-transform:skewX(.125rad)
-}
-.side .md h4+h4+h4+ul li a:hover em{width:140px}
-.side .md h4+h4+h4+ul li a strong,
-.side .md h4+h4+h4+ul li a del{
-position:absolute;
-bottom:10px;
-transform:skewX(-.125rad)
-}
-.side .md h4+h4+h4+ul li:nth-child(1) a em{background:url(%%r1%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(2) a em{background:url(%%b21%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(3) a em{background:url(%%s20%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(4) a em{background:url(%%m44%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(5) a em{background:url(%%g16%%) no-repeat center center}*/
-
 /*Retired+Banners*/
 .side .md hr+hr+ul{
 position:absolute;
@@ -1376,7 +1333,7 @@ list-style-type:none
 position:relative;
 display:block;
 width:68px;height:96px;
-background:url(%%b3%%) no-repeat;
+background:url(%%b%%) no-repeat;
 text-indent:-9999px;
 box-shadow:0 0 8px rgba(255,0,0,.35)
 }
@@ -1384,7 +1341,7 @@ box-shadow:0 0 8px rgba(255,0,0,.35)
 .side .md hr+hr+ul li a:after{
 content:"";
 display:block;
-background:url(%%b3%%) no-repeat
+background:url(%%b%%) no-repeat
 }
 .side .md hr+hr+ul li:before{
 width:68px;height:23px;
@@ -1475,7 +1432,6 @@ text-align:center
 /*Sidebar*/
 .side{
 margin:260px 0 0 0;padding:10px;
-/*margin:0;padding:10px;*/
 width:300px;min-width:300px;
 background:#F6F6F6
 }
@@ -1493,7 +1449,7 @@ display:block;
 position:absolute;
 top:19px;right:10px;
 width:320px;height:90px;
-background:url(%%b3%%) no-repeat -476px -36px
+background:url(%%b%%) no-repeat -476px -36px
 }
 .sidebox.submit .morelink{background:transparent!important;border:0}
 .sidebox.submit .morelink,.side a.helplink{top:109px;right:0;z-index:1000}
@@ -1548,14 +1504,14 @@ top:218px;right:30px;
 opacity:.5;
 z-index:1001
 }
-/*#searchexpando,*/.sidecontentbox .content,.linkinfo{
+.sidecontentbox .content,.linkinfo{
 margin:0;padding:5px 10px;
 background:#FFF;
 border:0;
 box-shadow:1px 1px 4px #DCDCDC;
 border-radius:3px
 }
-.comment .md .madeVisible/*,#searchexpando p:nth-last-of-type(1)*/{margin-top:5px}
+.comment .md .madeVisible{margin-top:5px}
 .side .usertext-body .md{margin:0 10px}
 .side .md h5+ul{
 clear:both;
@@ -1950,7 +1906,6 @@ border-radius:0!important
 .side .md ul,
 .gadget .reddit-entry,
 .commentarea .menuarea .spacer{margin:0;padding:0}
-/*#searchexpando p:nth-last-of-type(1),*/
 .flairselector .flairoptionpane,
 .comment .entry .md p:nth-last-of-type(1),
 .linkflair .md hr+hr+ul li:last-child,
@@ -1961,7 +1916,6 @@ border-radius:0!important
 .md h4+hr+h4+ul li:last-child{margin-bottom:0}
 .comment .entry .md p{margin-bottom:6px}
 .titlebox,
-/*#searchexpando,*/
 .sidecontentbox,
 .sponsorshipbox{margin-bottom:10px}
 .sharetable.preftable{margin-left:149px}
@@ -1988,8 +1942,6 @@ form.logout a:hover
 .side h1.redditname+div,
 .side .subButtons{text-align:center}
 .side .subButtons{padding-bottom:5px}
-
-/*Night Mode*/
 
 /*Media Queries*/
 @media all and (max-width:936px){.side #search input[type=submit]{display:none}}
