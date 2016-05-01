@@ -355,7 +355,7 @@ top:0;left:0;bottom:0;
 margin:0;
 min-width:60px!important;max-width:60px!important;
 height:100%;
-background:#E1E1E1 url(%%p2%%) no-repeat 0 0;
+background:#E1E1E1 url(%%p6%%) no-repeat 0 0;
 }
 .link:before{content:"";z-index:699}
 .link .thumbnail{max-height:84px;z-index:700}
@@ -390,7 +390,8 @@ letter-spacing:-.1em
 .link .score.unvoted{color:#B4B4B4}
 .link .score.dislikes{color:#D7D7D7}
 .link .title:before,
-.linkflair-offseason .linkflairlabel{
+.linkflair-offseason .linkflairlabel,
+.linkflair-ff .linkflairlabel{
 content:"";
 top:4px;left:134px;bottom:4px;
 min-width:5px;
@@ -399,12 +400,15 @@ z-index:7
 }
 .link:hover .linkflairlabel{background:#E3E3E3}
 .link:hover .title:before,
+.linkflair-ff:hover .linkflairlabel
 .linkflair-offseason:hover .linkflairlabel{background:#AAE1C7}
 .link.self .title:before,
 .linkflair-ama .linkflairlabel,
+.linkflair-ij .linkflairlabel,
 .link .title[href*="youtu"]:before{background:#F8D7DC}
 .link.self:hover .title:before,
 .linkflair-ama:hover .linkflairlabel,
+.linkflair-ij:hover .linkflairlabel,
 .link:hover .title[href*="youtu"]:before{background:#F1AEB8}
 .link.promoted .title:before{background:#D8D8D8}
 .link.promoted:hover .title:before{background:#B2B2B2}
@@ -550,7 +554,7 @@ text-transform:capitalize
 }
 .nextprev a:hover,.next-suggestions a:hover{background:#DC354E;border:0}
 
-/*Wiki*/
+/*Rules&Wiki*/
 .md.wiki h1{font-size:14px}
 .md.wiki h1,.md.wiki h2,.md.wiki h3,
 .md.wiki h4,.md.wiki h5,.md.wiki h6{
@@ -1011,10 +1015,14 @@ border-radius:0
 .linkflair-asg:hover .linkflairlabel{background:#F1DDB2}
 .linkflair-draft .linkflairlabel{background:#D5DCE7}
 .linkflair-draft:hover .linkflairlabel{background:#ACB9D0}
-.linkflair-pod .linkflairlabel{background:#E8F0F9}
-.linkflair-pod:hover .linkflairlabel{background:#D2E1F2}
-.linkflair-trade .linkflairlabel{background:#EAE1F1}
-.linkflair-trade:hover .linkflairlabel{background:#D5C3E3}
+.linkflair-pod .linkflairlabel,
+.linkflair-hl .linkflairlabel{background:#E8F0F9}
+.linkflair-pod:hover .linkflairlabel,
+.linkflair-hl:hover .linkflairlabel{background:#D2E1F2}
+.linkflair-trade .linkflairlabel,
+.linkflair-rm .linkflairlabel{background:#EAE1F1}
+.linkflair-trade:hover .linkflairlabel,
+.linkflair-rm:hover .linkflairlabel{background:#D5C3E3}
 .linkflair-stats .linkflairlabel{background:#E1F5F7}
 .linkflair-stats:hover .linkflairlabel{background:#C3EAEE}
 .flairselector li a,.flairselector .flairremove a,
@@ -1042,6 +1050,10 @@ border-radius:0
 .link.linkflair-offseason .thumbnail{background-position:-900px 0}
 .link.linkflair-ama .thumbnail{background-position:-960px 0}
 .link.linkflair-stats .thumbnail{background-position:-1020px 0}
+.link.linkflair-ij .thumbnail{background-position:-1140px 0}
+.link.linkflair-hl .thumbnail{background-position:-1200px 0}
+.link.linkflair-rm .thumbnail{background-position:-1260px 0}
+.link.linkflair-ff .thumbnail{background-position:-1320px 0}
 
 /*Teams*/
 .md hr+ul:nth-of-type(1) li:first-child a[href^="#"],
@@ -1217,7 +1229,7 @@ width:100%;height:158px;
 cursor:default;
 z-index:-1
 }
-.md a[href$="#B0"]{background:url(%%0%%) no-repeat}
+/*.md a[href$="#B0"]{background:url(%%0%%) no-repeat}
 .md a[href$="#B1"]{background:url(%%1%%) no-repeat}
 .md a[href$="#B3"]{background:url(%%3%%) no-repeat}
 .md a[href$="#B5"]{background:url(%%5%%) no-repeat}
@@ -1229,7 +1241,7 @@ z-index:-1
 .md a[href$="#B22"]{background:url(%%22%%) no-repeat}
 .md a[href$="#B41"]{background:url(%%41%%) no-repeat}
 .md a[href$="#B44"]{background:url(%%44%%) no-repeat}
-.md a[href$="#B55"]{background:url(%%55%%) no-repeat}
+.md a[href$="#B55"]{background:url(%%55%%) no-repeat}*/
 .side .usertext-body .md h4+h3+h4+ul li{
 max-width:140px;
 color:#FFF;
@@ -1317,49 +1329,6 @@ max-width:800px
 .linkflair-stats .md table tr td:first-child,
 .linkflair-stats .md table tr:nth-child(even) td{background:#F3F3F3}
 
-/*Starting Five*/
-/*.side .md h4+h4+h4+ul{
-position:absolute;
-top:19px;left:209px;
-padding-left:18px;
-z-index:-2!important
-}
-.side .md h4+h4+h4+ul li{float:left;list-style-type:none}
-.side .md h4+h4+h4+ul li a,
-.side .md h4+h4+h4+ul li a em{
-display:inline-block;
-width:60px;height:140px;
-text-indent:-9999px;
-transition:width .5s;
-}
-.side .md h4+h4+h4+ul li a{
-position:relative;
-border-left:3px solid #D70E32;
-overflow:hidden;
-transform:skewX(-.125rad)
-}
-.side .md h4+h4+h4+ul li:last-child a{border-right:3px solid #D70E32}
-.side .md h4+h4+h4+ul li a:hover{width:120px}
-.side .md h4+h4+h4+ul li a em{
-position:relative;
-display:block;
-left:-10px;
-width:90px;
-transform:skewX(.125rad)
-}
-.side .md h4+h4+h4+ul li a:hover em{width:140px}
-.side .md h4+h4+h4+ul li a strong,
-.side .md h4+h4+h4+ul li a del{
-position:absolute;
-bottom:10px;
-transform:skewX(-.125rad)
-}
-.side .md h4+h4+h4+ul li:nth-child(1) a em{background:url(%%r1%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(2) a em{background:url(%%b21%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(3) a em{background:url(%%s20%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(4) a em{background:url(%%m44%%) no-repeat center center}
-.side .md h4+h4+h4+ul li:nth-child(5) a em{background:url(%%g16%%) no-repeat center center}*/
-
 /*Retired+Banners*/
 .side .md hr+hr+ul{
 position:absolute;
@@ -1384,7 +1353,7 @@ box-shadow:0 0 8px rgba(255,0,0,.35)
 .side .md hr+hr+ul li a:after{
 content:"";
 display:block;
-background:url(%%b3%%) no-repeat
+background:url(%%b%%) no-repeat
 }
 .side .md hr+hr+ul li:before{
 width:68px;height:23px;
@@ -1475,7 +1444,6 @@ text-align:center
 /*Sidebar*/
 .side{
 margin:260px 0 0 0;padding:10px;
-/*margin:0;padding:10px;*/
 width:300px;min-width:300px;
 background:#F6F6F6
 }
@@ -1493,7 +1461,7 @@ display:block;
 position:absolute;
 top:19px;right:10px;
 width:320px;height:90px;
-background:url(%%b3%%) no-repeat -476px -36px
+background:url(%%b%%) no-repeat -476px -36px
 }
 .sidebox.submit .morelink{background:transparent!important;border:0}
 .sidebox.submit .morelink,.side a.helplink{top:109px;right:0;z-index:1000}
@@ -1548,14 +1516,14 @@ top:218px;right:30px;
 opacity:.5;
 z-index:1001
 }
-/*#searchexpando,*/.sidecontentbox .content,.linkinfo{
+.sidecontentbox .content,.linkinfo{
 margin:0;padding:5px 10px;
 background:#FFF;
 border:0;
 box-shadow:1px 1px 4px #DCDCDC;
 border-radius:3px
 }
-.comment .md .madeVisible/*,#searchexpando p:nth-last-of-type(1)*/{margin-top:5px}
+.comment .md .madeVisible{margin-top:5px}
 .side .usertext-body .md{margin:0 10px}
 .side .md h5+ul{
 clear:both;
@@ -1787,8 +1755,9 @@ margin:0;padding:0;
 border:none;border-radius:0!important
 }
 .footer-parent .bottommenu{background:#F6F6F6;text-align:left}
-.footer-parent .bottommenu:nth-last-of-type(2){padding:15px 15px 0 75px;border-top:1px solid #E1E1E1}
-.footer-parent .bottommenu:nth-last-of-type(1){padding:2px 15px 20px 75px}
+.footer-parent .bottommenu:nth-of-type(1){padding:15px 15px 0 75px;border-top:1px solid #E1E1E1}
+.footer-parent .bottommenu:nth-of-type(2){padding:2px 15px 20px 75px}
+.footer-parent .bottommenu-advertise{margin:-23px 0 0 0;padding:5px 0 16px 75px}
 .footer-parent .bottommenu a{
 font-weight:bold;
 color:#888;
@@ -1950,7 +1919,6 @@ border-radius:0!important
 .side .md ul,
 .gadget .reddit-entry,
 .commentarea .menuarea .spacer{margin:0;padding:0}
-/*#searchexpando p:nth-last-of-type(1),*/
 .flairselector .flairoptionpane,
 .comment .entry .md p:nth-last-of-type(1),
 .linkflair .md hr+hr+ul li:last-child,
@@ -1961,7 +1929,6 @@ border-radius:0!important
 .md h4+hr+h4+ul li:last-child{margin-bottom:0}
 .comment .entry .md p{margin-bottom:6px}
 .titlebox,
-/*#searchexpando,*/
 .sidecontentbox,
 .sponsorshipbox{margin-bottom:10px}
 .sharetable.preftable{margin-left:149px}
@@ -1985,11 +1952,7 @@ form.logout a:hover
 .side .md hr+hr+ul li a:hover:after{opacity:1}
 .single-page .sitetable:nth-of-type(1) .link:nth-of-type(1) .flat-list{margin-bottom:5px}
 .linkinfo div,
-.side h1.redditname+div,
-.side .subButtons{text-align:center}
-.side .subButtons{padding-bottom:5px}
-
-/*Night Mode*/
+.side h1.redditname+div{text-align:center}
 
 /*Media Queries*/
 @media all and (max-width:936px){.side #search input[type=submit]{display:none}}

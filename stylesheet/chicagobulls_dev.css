@@ -355,7 +355,7 @@ top:0;left:0;bottom:0;
 margin:0;
 min-width:60px!important;max-width:60px!important;
 height:100%;
-background:#E1E1E1 url(%%p2%%) no-repeat 0 0;
+background:#E1E1E1 url(%%p6%%) no-repeat 0 0;
 }
 .link:before{content:"";z-index:699}
 .link .thumbnail{max-height:84px;z-index:700}
@@ -390,7 +390,8 @@ letter-spacing:-.1em
 .link .score.unvoted{color:#B4B4B4}
 .link .score.dislikes{color:#D7D7D7}
 .link .title:before,
-.linkflair-offseason .linkflairlabel{
+.linkflair-offseason .linkflairlabel,
+.linkflair-ff .linkflairlabel{
 content:"";
 top:4px;left:134px;bottom:4px;
 min-width:5px;
@@ -399,12 +400,15 @@ z-index:7
 }
 .link:hover .linkflairlabel{background:#E3E3E3}
 .link:hover .title:before,
+.linkflair-ff:hover .linkflairlabel
 .linkflair-offseason:hover .linkflairlabel{background:#AAE1C7}
 .link.self .title:before,
 .linkflair-ama .linkflairlabel,
+.linkflair-ij .linkflairlabel,
 .link .title[href*="youtu"]:before{background:#F8D7DC}
 .link.self:hover .title:before,
 .linkflair-ama:hover .linkflairlabel,
+.linkflair-ij:hover .linkflairlabel,
 .link:hover .title[href*="youtu"]:before{background:#F1AEB8}
 .link.promoted .title:before{background:#D8D8D8}
 .link.promoted:hover .title:before{background:#B2B2B2}
@@ -1011,10 +1015,14 @@ border-radius:0
 .linkflair-asg:hover .linkflairlabel{background:#F1DDB2}
 .linkflair-draft .linkflairlabel{background:#D5DCE7}
 .linkflair-draft:hover .linkflairlabel{background:#ACB9D0}
-.linkflair-pod .linkflairlabel{background:#E8F0F9}
-.linkflair-pod:hover .linkflairlabel{background:#D2E1F2}
-.linkflair-trade .linkflairlabel{background:#EAE1F1}
-.linkflair-trade:hover .linkflairlabel{background:#D5C3E3}
+.linkflair-pod .linkflairlabel,
+.linkflair-hl .linkflairlabel{background:#E8F0F9}
+.linkflair-pod:hover .linkflairlabel,
+.linkflair-hl:hover .linkflairlabel{background:#D2E1F2}
+.linkflair-trade .linkflairlabel,
+.linkflair-rm .linkflairlabel{background:#EAE1F1}
+.linkflair-trade:hover .linkflairlabel,
+.linkflair-rm:hover .linkflairlabel{background:#D5C3E3}
 .linkflair-stats .linkflairlabel{background:#E1F5F7}
 .linkflair-stats:hover .linkflairlabel{background:#C3EAEE}
 .flairselector li a,.flairselector .flairremove a,
@@ -1042,6 +1050,10 @@ border-radius:0
 .link.linkflair-offseason .thumbnail{background-position:-900px 0}
 .link.linkflair-ama .thumbnail{background-position:-960px 0}
 .link.linkflair-stats .thumbnail{background-position:-1020px 0}
+.link.linkflair-ij .thumbnail{background-position:-1140px 0}
+.link.linkflair-hl .thumbnail{background-position:-1200px 0}
+.link.linkflair-rm .thumbnail{background-position:-1260px 0}
+.link.linkflair-ff .thumbnail{background-position:-1320px 0}
 
 /*Teams*/
 .md hr+ul:nth-of-type(1) li:first-child a[href^="#"],
@@ -1743,8 +1755,9 @@ margin:0;padding:0;
 border:none;border-radius:0!important
 }
 .footer-parent .bottommenu{background:#F6F6F6;text-align:left}
-.footer-parent .bottommenu:nth-last-of-type(2){padding:15px 15px 0 75px;border-top:1px solid #E1E1E1}
-.footer-parent .bottommenu:nth-last-of-type(1){padding:2px 15px 20px 75px}
+.footer-parent .bottommenu:nth-of-type(1){padding:15px 15px 0 75px;border-top:1px solid #E1E1E1}
+.footer-parent .bottommenu:nth-of-type(2){padding:2px 15px 20px 75px}
+.footer-parent .bottommenu-advertise{margin:-23px 0 0 0;padding:5px 0 16px 75px}
 .footer-parent .bottommenu a{
 font-weight:bold;
 color:#888;
@@ -1939,9 +1952,7 @@ form.logout a:hover
 .side .md hr+hr+ul li a:hover:after{opacity:1}
 .single-page .sitetable:nth-of-type(1) .link:nth-of-type(1) .flat-list{margin-bottom:5px}
 .linkinfo div,
-.side h1.redditname+div,
-.side .subButtons{text-align:center}
-.side .subButtons{padding-bottom:5px}
+.side h1.redditname+div{text-align:center}
 
 /*Media Queries*/
 @media all and (max-width:936px){.side #search input[type=submit]{display:none}}
