@@ -769,7 +769,7 @@ top:-5px;left:-36px;
 float:left;
 display:inline-block;
 width:30px;height:30px;
-background:url(%%f%%) no-repeat 0 0
+background:url(%%f2%%) no-repeat 0 0
 }
 .titlebox .flairtoggle{
 margin-top:5px!important;padding:5px 0!important;
@@ -976,6 +976,8 @@ a.author[href$="/user/BullsBot"]{color:#6E6E6E!important}
 .flair-nrm:before{background-position:-540px -150px}
 .flair-ssb:before{background-position:-630px 0}
 .flair-atm:before{background-position:-570px -150px}
+.flair-mcn:before{background-position:-600px -150px}
+.flair-mls:before{background-position:-630px -150px}
 
 /*AMA*/
 .thing[data-author="mcgrawdh"] .child .md,.thing[data-author="ctsbulls"] .child .md p{font-weight:normal!important;color:#222!important}
@@ -1383,7 +1385,7 @@ transition:opacity .2s ease-in-out
 display:block;
 margin:4px auto;
 width:30px;height:30px;
-background:url(%%f%%) no-repeat
+background:url(%%f2%%) no-repeat
 }
 .linkflair-draft .md table+table a[href^="#"]{display:inline-block;margin:0}
 .flair-ATL:before,.linkflair-draft .md a[href$="#ATL"],.md table a[href$="#ATL"]{background-position:-90px -180px}
